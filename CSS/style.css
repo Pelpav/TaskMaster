@@ -1,0 +1,189 @@
+#tasks {
+  float: right;
+  margin-top: 5px;
+}
+.poubelle {
+  font-size: 30px;
+  color: white;
+  background-color: blue;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+
+p {
+  margin-bottom: 0;
+}
+
+#task-list {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 3.5vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+tr,
+td {
+  color: white;
+}
+
+.animated-border {
+  border: 2px solid;
+  animation: border-animation 2s infinite;
+}
+
+@keyframes border-animation {
+  0% {
+    border-color: red;
+  }
+
+  25% {
+    border-color: aqua;
+  }
+
+  50% {
+    border-color: aquamarine;
+  }
+
+  75% {
+    border-color: blue;
+  }
+
+  100% {
+    border-color: green;
+  }
+}
+
+tr {
+  border: 2px solid;
+  animation: border-animation 2s infinite;
+  margin-top: 5px;
+  list-style: none;
+  width: 90%;
+}
+
+.checked {
+  text-decoration: line-through;
+  font-size: 24px;
+}
+
+.desc {
+  font-size: 16px;
+}
+
+li input[type="checkbox"]:checked + p {
+  display: none;
+}
+
+input[type="checkbox"] {
+  padding-top: 3%;
+}
+
+.task-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  display: inline-block;
+}
+
+.task-description,
+.task-days-remaining,
+.task-priority {
+  font-size: 16px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+#task-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+  list-style: none;
+  z-index: 1;
+}
+
+#task-menu li {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+#task-edit-form {
+  display: none;
+}
+
+#task-edit-form form {
+  margin-top: 10px;
+}
+
+#task-edit-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: gray;
+  border: 1px solid gray;
+  padding: 10px;
+  list-style: none;
+  z-index: 1;
+  width: fit-content;
+}
+
+.menu p {
+  cursor: pointer;
+  margin-bottom: 5px;
+  display: inline;
+  padding-right: 0;
+}
+
+nav, ul, li, a{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  width: 100%;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li{
+  list-style: none;
+  padding: 0px 9px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  padding-top: 6px;
+}
+
+nav ul li a:hover{
+  color:#29fd53;
+}

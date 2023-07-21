@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskMaster</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link href="CSS/navbar.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="libs/bootstrap-5.0.2/dist/css/bootstrap.min.css" />
+  <script src="libs/jquery-3.6.4.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+</head>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ff966d, #fa538d, #89379c);
+  }
+
+  .container {
+    padding-top: 20px;
+  }</style>
+<body>
+      <nav>
+        <h1>Bienvenue sur TaskMaster</h1>
+        <ul>
+          <li><a href="acceuil.html">Acceuil</a></li>
+          <li><a href="about.html">A propos</a></li>
+      
+          <li><a href="FormAdd.html">Taches</a></li>
+      
+        </ul>
+      </nav>
+  <div class="container">
+
+    <div id="no-tasks" class="text-center">
+      <p>Vous n'avez pas encore ajouté de tâches.</p>
+      <button id="add-task-button" class="btn btn-primary">+</button>
+    </div>
+
+    <div id="tasks" style="display: none">
+      <table>
+        <td>
+          <button id="btnAddTask" class="btn btn-primary">+</button>
+        </td>
+        <td>
+          <span class="btn btn-primary"><ion-icon id="deleteicon" name="trash-outline"></ion-icon></span>
+        </td>
+      </table>
+    </div>
+
+    <div id="task-form" style="backdrop-filter: blur(10px); position: fixed; top: 0; left:0; right: 0; bottom: 0; display: flex; justify-content: center; align-items: center; z-index: 1;">
+      <form>
+        <div class="form-group">
+          <label for="task-title">Titre de la tâche</label>
+          <input type="text" class="form-control" id="task-title" required />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="task-description">Description</label>
+          <textarea class="form-control" id="task-description" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="task-due-date">Date d'échéance</label>
+          <input type="date" class="form-control" id="task-due-date" required />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="task-priority">Priorité</label>
+          <select class="form-control" id="task-priority" required>
+            <option value="1">Haute</option>
+            <option value="2">Moyenne</option>
+            <option value="3" selected>Basse</option>
+          </select>
+        </div>
+
+        <div class="d-flex justify-content-between gap-3 mt-3">
+          <button id="btnAddTaskList" class="btn btn-primary w-100">
+            Ajouter
+          </button>
+          <button id="btnCancelAddTask" type="reset" class="btn btn-danger w-100">
+            Annuler
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div style="float: left" id="check"></div>
+
+    <div id="result">
+      <div id="task-list" style="overflow-y: scroll; height: 65vh;">
+        <!-- La liste des tâches sera générée dynamiquement ici -->
+        
+      </div>
+    </div>
+  </div>
+  <script src="js/formAdd.js"></script>
+</body>
+
+</html>
